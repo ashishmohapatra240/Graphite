@@ -1035,7 +1035,7 @@ impl Render for Table<Vector> {
 							source_node_id: None,
 						});
 
-						let bounds = row.element.bounding_box_with_transform(applied_stroke_transform).unwrap_or(layer_bounds);
+						let bounds = layer_bounds;
 						let weight = row.element.style.stroke().unwrap().effective_width();
 						let quad = Quad::from_box(bounds).inflate(weight * max_scale(applied_stroke_transform));
 						let bounds = quad.bounding_box();
